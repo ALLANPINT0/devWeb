@@ -2,44 +2,142 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Állan Pinto</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Állan Pinto</title>
 </head>
 
-<body>
-    <header>
-        <img class="foto" src="0c4898-renders_anonymous_mask_by_samcro_33-d4q56cv.webp" alt="Ilustrção do anonymous" />
-        <h1 id="title">Állan Pinto</h1>
-    </header>
-    <hr>
-    <section>
-        <header>
-            <h2 class="subtitle">Posts</h2>
-        </header>
-        <article class="post">
-            <h3 class="post_title">post #1</h3>
-            <img src="photo-1583339793403-3d9b001b6008.avif" alt="codigo html em img" width="400" height="400" />
-        </article>
-    </section>
-    <hr>
-    <center>
-        <footer>
-            <ul>
-                <li>
-                    <a href="https://www.linkedin.com/in/adsallanpinto/" target="_blank"
-                        rel="noopener noreferrer">LinkedIn</a>
-                </li>
-                <li>
-                    <a href="https://github.com/CH00J1" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </li>
-            </ul>
-        </footer>
-    </center>
-    
+<script src="script.js"></script>
 
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <img class="foto" src="0c4898-renders_anonymous_mask_by_samcro_33-d4q56cv.webp" alt="Ilustrção do anonymous" />
+    <h1 id="title">Állan Pinto</h1>
+  </header>
+
+  <hr />
+  <section>
+    <header>
+      <h2 class="subtitle">Posts</h2>
+    </header>
+
+    <article class="post">
+      <h3 class="post_title">post #1</h3>
+      <img class="rounded-circle" src="photo-1583339793403-3d9b001b6008.avif" alt="codigo html em img" />
+    </article>
+  </section>
+  <hr />
+  <center>
+    <footer>
+      <ul class="lista_contatos">
+        <li>
+          <a href="https://www.linkedin.com/in/adsallanpinto/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </li>
+        <li>
+          <a href="https://github.com/CH00J1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </li>
+      </ul>
+    </footer>
+  </center>
+
+  <BR></BR><BR></BR>
+  <hr>
+  <center>
+    <section class="form">
+      <form action="backend.php" method="get">
+        <label for=""> Nome Usuario: </label>
+        <input type="text" name="NomeCliente" id="" placeholder="DIGITE SEU NOME AQUI">
+        <BR></BR>
+        <label for=""> Nome Usuario: </label>
+        <input type="password" name="senha" id="" placeholder="digite sua senha aqui">
+        <BR></BR>
+        <label for="">Genero: </label>
+        <br>
+        <input type="radio" name="genero" value="m" id=""> masculino
+        <input type="radio" name="genero" value="f" id=""> feminino
+        <BR></BR>
+        <label for="">Preferencias: </label>
+        <br>
+        <input type="checkbox" name="pereferncias" value="1" id=""> homem
+        <input type="checkbox" name="pereferncias" value="2" id=""> mulher
+        <input type="checkbox" name="pereferncias" value="3" id=""> trans
+        <input type="checkbox" name="pereferncias" value="4" id=""> homosexual
+        <input type="hidden" name="campoEscondido" value="1111" />
+        <br>
+        <label for="">Numero: </label>
+        <input type="number" name="" id="">
+        <br>
+        <label for="">Email : </label>
+        <input type="email" name="" id="">
+        <br>
+        <label for="">Data: </label>
+        <input type="date" name="" id="">
+        <BR></BR><BR></BR>
+        <label for=""> postagem*: </label>
+        <textarea name="post" id="" cols="30" rows="10"></textarea>
+        <br /><br />
+        <label>Universidades*: </label>
+        <select name="unis">
+          <option value="UNAMA">UNAMA</option>
+          <option value="UFPA">UFPA</option>
+          <option value="UEPA">UEPA</option>
+          <option value="UFRA">UFRA</option>
+        </select>
+        <BR></BR><BR></BR>
+        <input class="btn btn-primary" type="submit" value="CADASTRAR">
+        <input class="btn btn-primary" type="button" value="BUTAUM">
+        <input class="btn btn-primary" type="reset" value="RESET"
+          onclick="return confirm('Deseja Realmente Apagar tudo ?')">
+
+      </form>
+    </section>
+
+  </center>
+
+  <hr>
 </body>
 
 </html>
